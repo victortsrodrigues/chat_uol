@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="css/reset.css" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+  <div class="escondido" onclick="voltaChat()"></div>
+  <div class="escondido">
+    <p class="titulo_sidebar">Escolha um contato para enviar mensagem:</p>
+    <div class="para_todos" onclick="direcionaMsg(this)">
+      <ion-icon name="people" class="icon3"></ion-icon>
+      <p class="texto_sidebar">Todos</p>
+      <img class="check escondido" src="img/Vector.png" />
+    </div>
+    <div class="participantes"></div>
+    <div class="visibilidade">
+      <p class="titulo_sidebar">Escolha a visibilidade:</p>
+      <div class="publico" onclick="escolhaVisibilidade(this)">
+        <ion-icon name="lock-open" class="icon3"></ion-icon>
+        <p class="texto_sidebar">Público</p>
+        <img class="check escondido" src="img/Vector.png" />
+      </div>
+      <div class="privado" onclick="escolhaVisibilidade(this)">
+        <ion-icon name="lock-closed" class="icon3"></ion-icon>
+        <p class="texto_sidebar">Reservadamente</p>
+        <img class="check escondido" src="img/Vector.png" />
+      </div>
+    </div>
+  </div>
+  <header>
+    <img class="uol" src="img/logouol.png" />
+    <ion-icon name="people" class="icon1" onclick="acessarSidebar()"></ion-icon>
+  </header>
+  <div class="conteiner"></div>
+  <footer class="rodape">
+    <div class="texto_rodape">
+      <input type="text" placeholder="Escreva aqui." class="nova_msg">
+      <div>
+        <span class="enviando_para">Enviado para</span>
+        <span class="publico_privado"></span>
+      </div>
+    </div>
+    <ion-icon name="paper-plane-outline" class="icon2" onclick="enviarMsg()"></ion-icon>
+  </footer>
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>
